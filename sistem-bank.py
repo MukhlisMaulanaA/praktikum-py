@@ -19,13 +19,11 @@ users = [
 status_login = False
 pakai_atm = "y"
 
-
 def cek_login(p):
     for user in users:
         if user['pin'] == p:
             return user
     return False
-
 
 def cek_user(id):
     for i in range(len(users)):
@@ -65,7 +63,6 @@ def ambil_uang(uang):
         else:
             print("Ops saldo anda tidak cukup")
 
-
 def isi_saldo(uang):
     index1 = cek_user(user_id)
     if index1 >= 0:
@@ -78,7 +75,7 @@ def isi_saldo(uang):
 
 while pakai_atm == "y":
     while not status_login:
-        print("SELAMAT DATANG DI ATM BANK Pesonainformatika")
+        print("SELAMAT DATANG DI ATM BANK Kaya Sejahtera")
         print("Silahkan masukan pin anda")
         pin = input("Masukan PIN : ")
 
@@ -96,7 +93,7 @@ while pakai_atm == "y":
 
     while loop == "y" and status_login:
         u = users[cek_user(user_id)]
-        print("SELAMAT DATANG DI ATM Pesonainformatika")
+        print("SELAMAT DATANG DI ATM Kaya Sejahtera")
         print("1.Cek Saldo")
         print("2.Transfer Uang")
         print("3.Ambil Uang")
